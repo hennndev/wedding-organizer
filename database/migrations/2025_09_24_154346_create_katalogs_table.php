@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('katalogs', function (Blueprint $table) {
+            $table->id();
+            $table->string('gambar')->nullable(); // kolom untuk foto
+            $table->string('name');               // nama paket
+            $table->integer('harga');             // harga
+            $table->string('lokasi');             // lokasi
+            $table->text('deskripsi');            // deskripsi
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('katalogs');
+    }
+};
