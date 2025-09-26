@@ -52,6 +52,7 @@
         /* Gallery */
         .gallery img { height: 200px; object-fit: cover; width: 100%; }
 
+
         /* Footer */
         footer { background: #f1f1f1; padding: 2rem 0; }
         footer h6 { font-family: 'Playfair Display', serif; font-weight: 600; }
@@ -105,10 +106,7 @@
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link active" href="#hero">Beranda</a></li>
                 <li class="nav-item"><a class="nav-link" href="#katalog">Katalog</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
-                <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
             </ul>
              <div class="d-flex">
         <a class="btn btn-primary ms-lg-3" href="#contact">Pesan Sekarang</a>
@@ -153,14 +151,231 @@
     </div>
 </section>
 
+<!-- Penawaran Hari Ini -->
+<section class="py-5 deals-section" 
+         style="background: linear-gradient(135deg, #ffd6e7, #ffe6cc, #e6ccff);">
+    <div class="container">
+        <div class="section-title mb-3 d-flex justify-content-between align-items-center">
+            <h3>Penawaran Hari Ini</h3>
+        </div>
+        <div class="row flex-nowrap overflow-auto">
+            
+            <!-- Card 1 -->
+            <div class="col-10 col-md-4 col-lg-3 mb-3">
+                <div class="card deal-card h-100 shadow-sm">
+                    <img src="{{ asset('images/prewed1.jpeg') }}" class="card-img-top" alt="deal">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Hemat 500rb</span>
+                        <h6 class="fw-bold">Prewedding Paket A</h6>
+                        <p class="text-muted small">by Vendor A — Fotografi</p>
+                        <p>
+                            <del>IDR 4,500,000</del><br>
+                            <span class="fw-bold text-danger">IDR 3,999,000</span>
+                        </p>
+                        <span class="badge bg-secondary">Album</span>
+                        <span class="badge bg-secondary">Video</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-10 col-md-4 col-lg-3 mb-3">
+                <div class="card deal-card h-100 shadow-sm">
+                    <img src="{{ asset('images/band1.jpeg') }}" class="card-img-top" alt="deal">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Harga Terbaik</span>
+                        <h6 class="fw-bold">Paket Wedding Music</h6>
+                        <p class="text-muted small">by Vendor B — Band Musik</p>
+                        <p>
+                            <del>IDR 12,000,000</del><br>
+                            <span class="fw-bold text-danger">IDR 10,500,000</span>
+                        </p>
+                        <span class="badge bg-secondary">Entertainment</span>
+                        <span class="badge bg-secondary">Band</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-10 col-md-4 col-lg-3 mb-3">
+                <div class="card deal-card h-100 shadow-sm">
+                    <img src="{{ asset('images/cincin1.jpeg') }}" class="card-img-top" alt="deal">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Diskon 30%</span>
+                        <h6 class="fw-bold">Custom Cincin</h6>
+                        <p class="text-muted small">by Vendor C — Wedding Organizer</p>
+                        <p>
+                            <del>IDR 20,000,000</del><br>
+                            <span class="fw-bold text-danger">IDR 14,000,000</span>
+                        </p>
+                        <span class="badge bg-secondary">WO</span>
+                        <span class="badge bg-secondary">Full Day</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-10 col-md-4 col-lg-3 mb-3">
+                <div class="card deal-card h-100 shadow-sm">
+                    <img src="{{ asset('images/penyanyi1.jpeg') }}" class="card-img-top" alt="deal">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Diskon 30%</span>
+                        <h6 class="fw-bold">Deluxe Music</h6>
+                        <p class="text-muted small">by Vendor C — Wedding Organizer</p>
+                        <p>
+                            <del>IDR 20,000,000</del><br>
+                            <span class="fw-bold text-danger">IDR 14,000,000</span>
+                        </p>
+                        <span class="badge bg-secondary">WO</span>
+                        <span class="badge bg-secondary">Full Day</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Perencana Pernikahan di Indonesia -->
+<section class="py-5">
+    <div class="container">
+        <div class="section-title mb-3 d-flex justify-content-between align-items-center">
+            <div>
+                <h3>Perencana Pernikahan di Indonesia</h3>
+                <small class="text-muted">Lihat rekomendasi dengan semua budget</small>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row flex-nowrap overflow-auto">
+            <!-- Card 1 -->
+            <div class="card me-3 planner-card" style="width:220px;">
+                <img src="{{ asset('images/bali1.jpeg') }}" class="card-img-top" alt="Nika di Bali">
+                <div class="card-body">
+                    <h6 class="fw-bold mb-1">Nikah di Bali</h6>
+                    <div class="text-danger small">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                        <span class="text-muted">132</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card me-3 planner-card" style="width:220px;">
+                <img src="{{ asset('images/nikah1.jpeg') }}" class="card-img-top" alt="Amanda Renassa Wedding Organizer">
+                <div class="card-body">
+                    <h6 class="fw-bold mb-1">Amanda Raisa Prewedding</h6>
+                    <div class="text-danger small">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <span class="text-muted">8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card me-3 planner-card" style="width:220px;">
+                <img src="{{ asset('images/nikah2.jpeg') }}" class="card-img-top" alt="Malaika Wedding Planner">
+                <div class="card-body">
+                    <h6 class="fw-bold mb-1">Malika Love</h6>
+                    <div class="text-danger small">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <span class="text-muted">31</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card me-3 planner-card" style="width:220px;">
+                <img src="{{ asset('images/nikah3.jpeg') }}" class="card-img-top" alt="FIVE Seasons WO">
+                <div class="card-body">
+                    <h6 class="fw-bold mb-1">AOC Cutie</h6>
+                    <div class="text-danger small">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <span class="text-muted">107</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card me-3 planner-card" style="width:220px;">
+                <img src="{{ asset('images/nikah4.jpeg') }}" class="card-img-top" alt="Top Fusion Wedding">
+                <div class="card-body">
+                    <h6 class="fw-bold mb-1">Top Fusion Wedding</h6>
+                    <div class="text-danger small">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <span class="text-muted">63</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+<div class="card me-3 planner-card" style="width:220px;">
+    <img src="{{ asset('images/nikah5.jpeg') }}" class="card-img-top" alt="Royal Wedding Planner">
+    <div class="card-body">
+        <h6 class="fw-bold mb-1">Royal Wedding Planner</h6>
+        <div class="text-danger small">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+            <span class="text-muted">54</span>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+<!-- Tambahkan CSS -->
+<style>
+.planner-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+.planner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.planner-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+}
+</style>
+
 <!-- Services -->
-<section class="services" id="services">
+<section class="services" id="services" 
+         style="background-color: #fce4ec;">
     <div class="container">
         <h3 class="text-center mb-5">Our Services</h3>
         <div class="row text-center">
             @foreach($services as $srv)
                 <div class="col-md-4">
-                    <div class="icon"><i class="bi {{ $srv->icon }}"></i></div>
+                    <div class="icon">
+                        <i class="bi {{ $srv->icon }}"></i>
+                    </div>
                     <h5>{{ $srv->title }}</h5>
                     <p class="text-muted">{{ $srv->desc }}</p>
                 </div>
@@ -169,81 +384,46 @@
     </div>
 </section>
 
-<!-- About -->
-<section class="py-5" id="about">
-    <div class="container text-center">
-        <h3>JeWePe</h3>
-        <p class="text-muted">Hari spesial Anda seharusnya dipenuhi kebahagiaan, cinta, dan momen tak terlupakan. Tujuan kami adalah membuat pengalaman perencanaan pernikahan menyenangkan.</p>
-    </div>
-</section>
-
-<!-- Gallery -->
-<section class="py-5 bg-white" id="gallery">
-    <div class="container">
-        <h3 class="text-center mb-4">Galeri</h3>
-        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-            <div class="carousel-inner">
-                @foreach($gallery as $index => $img)
-                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <img src="{{ $img }}" 
-                             class="d-block w-100 rounded shadow-sm" 
-                             style="height:450px; object-fit:cover;" 
-                             alt="Galeri">
-                    </div>
-                @endforeach
-            </div>
-            
-            <!-- Tombol Next & Prev -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-
-            <!-- Indicator (bulat di bawah) -->
-            <div class="carousel-indicators">
-                @foreach($gallery as $index => $img)
-                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="{{ $index }}" 
-                            class="{{ $index === 0 ? 'active' : '' }}" aria-current="true"></button>
-                @endforeach
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact -->
-<section class="py-5" id="contact">
-    <div class="container text-center">
-        <h3>Kontak Kami</h3>
-        <p class="text-muted">Hubungi kami untuk informasi lebih lanjut atau pemesanan.</p>
-        <p class="mb-1">📞 +62-812-9780-028</p>
-        <p>✉️ JeWePe@gmail.com</p>
-        <a href="mailto:JeWePe@gmail.com" class="btn btn-primary mt-3">Kirim Email</a>
-    </div>
-</section>
-
 <!-- Footer -->
-<footer>
-    <div class="container d-flex justify-content-between flex-wrap">
-        <div>
-            <h6>Navigasi</h6>
-            <ul class="list-unstyled">
-                <li><a href="#hero" class="text-decoration-none text-dark">Beranda</a></li>
-                <li><a href="#katalog" class="text-decoration-none text-dark">Katalog</a></li>
-                <li><a href="#services" class="text-decoration-none text-dark">Our Services</a></li>
-                <li><a href="#about" class="text-decoration-none text-dark">Tentang Kami</a></li>
-                <li><a href="#gallery" class="text-decoration-none text-dark">Galeri</a></li>
-                <li><a href="#contact" class="text-decoration-none text-dark">Kontak</a></li>
-            </ul>
-        </div>
-        <div>
-            <h6>Kontak</h6>
-            <p class="mb-1">📞 +62-812-9780-028</p>
-            <p>✉️ JeWePe@gmail.com</p>
-        </div>
+<footer class="bg-light py-5 border-top">
+  <div class="container">
+    <div class="row text-center text-md-start align-items-start">
+      
+    <!-- Kolom Kiri -->
+<div class="col-md-4 mb-4 mb-md-0">
+  <h4 class="fw-bold text-primary">JeWePe</h4>
+  <p class="text-muted mt-3" style="max-width: 600px;">
+    Hari spesial Anda seharusnya dipenuhi dengan kebahagiaan, cinta, dan<br>
+    momen tak terlupakan. Tujuan kami adalah membuat pengalaman panjangnya<br>
+    perencanaan pernikahan Anda menjadi menyenangkan.
+  </p>
+</div>
+
+      <!-- Kolom Tengah -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="fw-bold mb-3">Navigasi</h5>
+        <ul class="list-unstyled">
+          <li><a href="#hero" class="text-decoration-none text-muted d-block mb-2">Beranda</a></li>
+          <li><a href="#katalog" class="text-decoration-none text-muted d-block mb-2">Katalog</a></li>
+          <li><a href="#about" class="text-decoration-none text-muted d-block">Tentang Kami</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom Kanan -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Kontak Kami</h5>
+        <p class="mb-1 text-muted">📞 +62-812-9780-028</p>
+        <p class="text-muted">✉️ <a href="mailto:JeWePe@gmail.com" class="text-decoration-none text-muted">JeWePe@gmail.com</a></p>
+        <a href="mailto:JeWePe@gmail.com" class="btn btn-primary btn-sm mt-2">Kirim Email</a>
+      </div>
     </div>
+
+    <!-- Garis Pembatas dan Copyright -->
+    <hr class="my-4">
+    <p class="text-center text-muted small mb-0">&copy; 2025 JeWePe. All rights reserved.</p>
+  </div>
 </footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
