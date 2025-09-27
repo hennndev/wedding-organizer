@@ -16,6 +16,11 @@ Route::get("/katalog/{id}", function(int $id) {
   return view("katalog", compact("katalog"));
 })->name("katalog");
 
+Route::get("/katalogs", function() {
+  $katalogs = Katalog::all();
+  return view("katalogs", compact("katalogs"));
+})->name("katalogs");
+
 Route::post("/katalog/{id}", function(Request $request, int $id) {
   $validated_data = $request->validate([
     "nama_pemesan" => ["string", "required"],

@@ -164,7 +164,7 @@
             <div class="collapse navbar-collapse" id="nav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link active" href="{{ route("home") }}">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#katalog">Katalog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route("katalogs") }}">Katalog</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route("tentang-kami") }}">Tentang Kami</a></li>
                 </ul>
                 <div class="d-flex">
