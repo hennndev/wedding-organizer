@@ -62,7 +62,7 @@ class PemesananResource extends Resource
             $record->update(['status' => $state]);
 
             if ($state === 'reject') {
-              $email = $record->email;
+              $email = $record->email_pemesan;
               $subject = urlencode("Pesanan ditolak");
               $body = urlencode("Halo {$record->name},\n\nMaaf, untuk pesanan jadwal wedding anda ditolak.");
               $url = "mailto:{$email}?subject={$subject}&body={$body}";
