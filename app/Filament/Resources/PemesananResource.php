@@ -53,10 +53,32 @@ class PemesananResource extends Resource
           ->options([
             'request' => 'Request',
             'approved' => 'Approved',
+            'reject' => 'Ditolak',
           ])
           ->sortable()
-          ->searchable(),
+          ->searchable()
+          ->updateStateUsing(function ($state, $record) {
+            // update value ke DB
+            $record->update(['status' => $state]);
 
+            if ($state === 'reject') {
+              $email = $record->email;
+              $subject = urlencode("Pesanan ditolak");
+              $body = urlencode("Halo {$record->name},\n\nMaaf, untuk pesanan jadwal wedding anda ditolak.");
+              $url = "mailto:{$email}?subject={$subject}&body={$body}";
+
+              // kasih notifikasi dengan link email
+              \Filament\Notifications\Notification::make()
+                ->title('Status ditolak')
+                ->body('Klik untuk kirim email ke ' . $email)
+                ->actions([
+                  \Filament\Notifications\Actions\Action::make('Kirim Email')
+                    ->url($url, shouldOpenInNewTab: true),
+                ])
+                ->send();
+            }
+            return $state;
+          })
       ])
       ->filters([
         //
@@ -68,10 +90,10 @@ class PemesananResource extends Resource
         Tables\Actions\BulkActionGroup::make([
           Tables\Actions\DeleteBulkAction::make(),
         ]),
-      ])
-      ->emptyStateActions([
-        Tables\Actions\CreateAction::make(),
       ]);
+    // ->emptyStateActions([
+    //   Tables\Actions\CreateAction::make(),
+    // ]);
   }
 
   public static function getRelations(): array

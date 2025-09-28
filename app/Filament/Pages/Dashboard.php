@@ -17,6 +17,7 @@ class Dashboard extends Page
             'total'    => Pemesanan::count(),
             'request'  => Pemesanan::where('status', 'Request')->count(),
             'approved' => Pemesanan::where('status', 'Approved')->count(),
+            'reject' => Pemesanan::where('status', 'reject')->count(),
         ];
     }
 }

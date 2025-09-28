@@ -12,6 +12,10 @@
             <h2 class="text-lg font-bold">Approved</h2>
             <p class="text-2xl text-green-600">{{ $this->getStats()['approved'] }}</p>
         </div>
+        <div class="p-4 bg-white shadow rounded-lg text-center">
+            <h2 class="text-lg font-bold">Ditolak</h2>
+            <p class="text-2xl text-green-600">{{ $this->getStats()['reject'] }}</p>
+        </div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

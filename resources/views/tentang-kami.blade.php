@@ -163,12 +163,12 @@
 
             <div class="collapse navbar-collapse" id="nav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link active" href="{{ route("home") }}">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route("home") }}">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route("katalogs") }}">Katalog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route("tentang-kami") }}">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ route("tentang-kami") }}">Tentang Kami</a></li>
                 </ul>
                 <div class="d-flex">
-                    <a class="btn btn-primary ms-lg-3" href="#contact">Pesan Sekarang</a>
+                    <a class="btn btn-primary ms-lg-3" href="{{ route("katalogs") }}">Pesan Sekarang</a>
                 </div>
             </div>
         </div>
@@ -239,16 +239,16 @@
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h5 class="fw-bold mb-3">Navigasi</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#hero" class="text-decoration-none text-muted d-block mb-2">Beranda</a></li>
-                        <li><a href="#katalog" class="text-decoration-none text-muted d-block mb-2">Katalog</a></li>
-                        <li><a href="#about" class="text-decoration-none text-muted d-block">Tentang Kami</a></li>
+                        <li><a href="{{ route("home") }}" class="text-decoration-none text-muted d-block mb-2">Beranda</a></li>
+                        <li><a href="{{ route("katalogs") }}" class="text-decoration-none text-muted d-block mb-2">Katalog</a></li>
+                        <li><a href="{{ route("tentang-kami") }}" class="text-decoration-none text-muted d-block">Tentang Kami</a></li>
                     </ul>
                 </div>
 
                 <!-- Kolom Kanan -->
                 <div class="col-md-4">
                     <h5 class="fw-bold mb-3">Kontak Kami</h5>
-                    <p class="mb-1 text-muted">📞 +62-812-9780-028</p>
+                    <p class="mb-1 text-muted">📞 +62-812-8888-77</p>
                     <p class="text-muted">✉️ <a href="mailto:JeWePe@gmail.com"
                             class="text-decoration-none text-muted">JeWePe@gmail.com</a></p>
                     <a href="mailto:JeWePe@gmail.com" class="btn btn-primary btn-sm mt-2">Kirim Email</a>
